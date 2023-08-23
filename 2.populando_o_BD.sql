@@ -1,0 +1,342 @@
+SHOW DATABASES;
+USE ecommerce;
+SHOW TABLES;
+    
+INSERT INTO CLIENTE_PF (`cpf`, `primeiroNome`, `ultimoNome`, `dataNascimento`, `endereco`, `cep`, `municipio`, `uf`, `pais`) VALUES
+('12345098702', 'André', 'Santana', '1992-07-18', 'Rua X, 123', '12345678', 'São Paulo', 'SP', 'Brasil'),
+('98765123401', 'Carla', 'Almeida', '1989-03-25', 'Av. Y, 456', '87654321', 'São Paulo', 'SP', 'Brasil'),
+('45678912302', 'Rodrigo', 'Oliveira', '1996-10-10', 'Rua Z, 789', '56789012', 'Campinas', 'SP', 'Brasil'),
+('78912345602', 'Juliana', 'Sousa', '2001-04-12', 'Av. W, 234', '23456789', 'São José dos Campos', 'SP', 'Brasil'),
+('98765432103', 'Marcos', 'Fernandes', '1993-08-30', 'Rua V, 567', '78901234', 'Sorocaba', 'SP', 'Brasil'),
+('12345678902', 'Patrícia', 'Gonçalves', '1986-01-20', 'Av. U, 678', '89012345', 'Ribeirão Preto', 'SP', 'Brasil'),
+('65432178902', 'Ricardo', 'Costa', '1997-09-05', 'Rua T, 789', '90123456', 'Santo André', 'SP', 'Brasil'),
+('12398765402', 'Letícia', 'Silva', '1990-07-12', 'Av. S, 890', '34567890', 'Osasco', 'SP', 'Brasil'),
+('87654321002', 'Marcela', 'Pereira', '1995-06-02', 'Rua R, 123', '56789012', 'São Bernardo do Campo', 'SP', 'Brasil'),
+('98765412302', 'Guilherme', 'Martins', '2004-02-15', 'Av. Q, 456', '78901234', 'São José do Rio Preto', 'SP', 'Brasil'),
+('65432109802', 'Camila', 'Alves', '1988-12-08', 'Rua P, 789', '90123456', 'Mogi das Cruzes', 'SP', 'Brasil'),
+('10987654302', 'Luciana', 'Rodrigues', '2000-11-12', 'Av. O, 123', '12345678', 'Piracicaba', 'SP', 'Brasil'),
+('43210987602', 'Fábio', 'Santos', '1994-01-25', 'Rua N, 456', '23456789', 'São Vicente', 'SP', 'Brasil'),
+('21098765402', 'Cristina', 'Ramos', '1998-07-15', 'Av. M, 789', '34567890', 'São Caetano do Sul', 'SP', 'Brasil'),
+('98701234502', 'Diego', 'Cruz', '1985-09-05', 'Rua L, 876', '45678901', 'Guarulhos', 'SP', 'Brasil'),
+('87654321001', 'Lucas', 'Rodrigues', '1991-04-02', 'Av. I, 123', '56789012', 'Uberlândia', 'MG', 'Brasil'),
+('98765412301', 'Isabela', 'Gonçalves', '2003-01-30', 'Rua J, 456', '78901234', 'Fortaleza', 'CE', 'Brasil'),
+('65432109801', 'Gustavo', 'Almeida', '1987-11-08', 'Av. K, 789', '90123456', 'Brasília', 'DF', 'Brasil'),
+('10987654301', 'Mariana', 'Costa', '1999-10-12', 'Rua L, 123', '12345678', 'Recife', 'PE', 'Brasil'),
+('43210987601', 'Henrique', 'Sousa', '1993-12-25', 'Av. M, 456', '23456789', 'São Luís', 'MA', 'Brasil'),
+('21098765401', 'Amanda', 'Ramos', '1997-06-15', 'Rua N, 789', '34567890', 'Porto Alegre', 'RS', 'Brasil'),
+('98701234501', 'Paulo', 'Cruz', '1984-08-05', 'Av. O, 876', '45678901', 'Goiânia', 'GO', 'Brasil');
+
+-- select uf,count(*) from CLIENTE_PF group by uf;
+
+INSERT INTO CLIENTE_PJ (`cnpj`, `razaoSocial`, `nomeFantasia`, `dataFundacao`, `endereco`, `cep`, `municipio`, `uf`, `pais`) VALUES
+('12345678901234', 'TechMaster Soluções Ltda', 'TechMaster', '2005-10-15', 'Rua da Tecnologia, 123', '12345678', 'São Paulo', 'SP', 'Brasil'),
+('98765432101234', 'Comércio Expresso S/A', 'Expresso Comércio', '1998-03-20', 'Av. das Vendas, 456', '87654321', 'Rio de Janeiro', 'RJ', 'Brasil'),
+('45678912301234', 'Inovação Moderna EIRELI', 'Inovação Moderna', '2010-06-12', 'Rua da Inovação, 789', '56789012', 'Belo Horizonte', 'MG', 'Brasil'),
+('78912345601234', 'Fábrica Criativa Ltda', 'Criativa Fábrica', '2002-12-08', 'Av. da Criatividade, 234', '23456789', 'Porto Alegre', 'RS', 'Brasil'),
+('98765432101235', 'Serviços Ágeis S/A', 'Ágeis Serviços', '2008-08-30', 'Rua dos Serviços, 567', '78901234', 'Salvador', 'BA', 'Brasil'),
+('12345098701235', 'Comércio Versátil Ltda', 'Versátil Comércio', '1995-01-25', 'Av. da Versatilidade, 678', '89012345', 'Florianópolis', 'SC', 'Brasil'),
+('65432178901235', 'Construções Modernas EIRELI', 'Modernas Construções', '2007-05-18', 'Rua das Construções, 789', '90123456', 'Campinas', 'SP', 'Brasil'),
+('12398765401235', 'Logística Rápida Ltda', 'Rápida Logística', '2012-09-02', 'Av. da Agilidade, 890', '34567890', 'São José dos Campos', 'SP', 'Brasil'),
+('87654321001236', 'Consultoria Eficaz S/A', 'Eficaz Consultoria', '2000-11-10', 'Rua da Eficiência, 123', '56789012', 'Uberlândia', 'MG', 'Brasil'),
+('98765412301236', 'Comércio Dinâmico EIRELI', 'Dinâmico Comércio', '2015-04-15', 'Av. da Dinâmica, 456', '78901234', 'Fortaleza', 'CE', 'Brasil'),
+('65432109801236', 'Indústria Criativa Ltda', 'Criativa Indústria', '1997-07-08', 'Rua da Criatividade, 789', '90123456', 'Brasília', 'DF', 'Brasil'),
+('10987654301236', 'Serviços Expressos S/A', 'Expressos Serviços', '2009-12-12', 'Av. da Agilidade, 123', '12345678', 'Recife', 'PE', 'Brasil'),
+('43210987601237', 'Tecnologia Avançada EIRELI', 'Avançada Tecnologia', '2003-03-25', 'Rua da Inovação, 456', '23456789', 'São Luís', 'MA', 'Brasil'),
+('21098765401237', 'Logística Eficiente Ltda', 'Eficiente Logística', '2006-07-15', 'Av. da Eficiência, 789', '34567890', 'Porto Alegre', 'RS', 'Brasil'),
+('98701234501237', 'Consultoria Estratégica S/A', 'Estratégica Consultoria', '2011-09-05', 'Rua da Estratégia, 876', '45678901', 'Goiânia', 'GO', 'Brasil');
+
+-- select uf,count(*) from CLIENTE_PJ group by uf;
+
+INSERT INTO CLIENTE (cpf, tipoCliente)
+VALUES
+('12345098702', 'PF'),
+('98765123401', 'PF'),
+('45678912302', 'PF'),
+('78912345602', 'PF'),
+('98765432103', 'PF'),
+('12345678902', 'PF'),
+('65432178902', 'PF'),
+('12398765402', 'PF'),
+('87654321002', 'PF'),
+('98765412302', 'PF'),
+('65432109802', 'PF'),
+('10987654302', 'PF'),
+('43210987602', 'PF'),
+('21098765402', 'PF'),
+('98701234502', 'PF'),
+('87654321001', 'PF'),
+('98765412301', 'PF'),
+('65432109801', 'PF'),
+('10987654301', 'PF'),
+('43210987601', 'PF'),
+('21098765401', 'PF'),
+('98701234501', 'PF');
+
+INSERT INTO CLIENTE (cnpj, tipoCliente)
+VALUES
+('12345678901234', 'PJ'),
+('98765432101234', 'PJ'),
+('45678912301234', 'PJ'),
+('78912345601234', 'PJ'),
+('98765432101235', 'PJ'),
+('12345098701235', 'PJ'),
+('65432178901235', 'PJ'),
+('12398765401235', 'PJ'),
+('87654321001236', 'PJ'),
+('98765412301236', 'PJ'),
+('65432109801236', 'PJ'),
+('10987654301236', 'PJ'),
+('43210987601237', 'PJ'),
+('21098765401237', 'PJ'),
+('98701234501237', 'PJ');
+
+-- select c.idCliente, concat(pf.primeiroNome,' ',pf.ultimoNome) as Nome_completo , pj.nomeFantasia from CLIENTE as c 
+-- left join CLIENTE_PF as pf using(cpf)
+--    left join CLIENTE_PJ as pj using(cnpj);
+
+
+INSERT INTO FORNECEDOR (razaoSocial, nomeFantasia, cnpj, dataFundacao, endereco, cep, municipio, uf, pais)
+VALUES
+('Fornecedor Tech', 'Tech Fornecimentos', '12345678901230', '2000-05-10', 'Rua da Tecnologia, 123', '12345678', 'São Paulo', 'SP', 'Brasil'),
+('Comércio Rápido Ltda', 'Rápido Comércio', '98765432101231', '1995-03-15', 'Av. das Vendas, 456', '87654321', 'São Paulo', 'SP', 'Brasil'),
+('Indústria Moderna EIRELI', 'Moderna Indústria', '45678912301232', '2010-08-20', 'Rua da Inovação, 789', '56789012', 'Campinas', 'SP', 'Brasil'),
+('Fábrica Criativa Ltda', 'Criativa Fábrica', '78912345601233', '2005-12-12', 'Av. da Criatividade, 234', '23456789', 'Sorocaba', 'SP', 'Brasil'),
+('Serviços Expressos S/A', 'Expressos Serviços', '98765432101234', '2008-07-01', 'Rua dos Serviços, 567', '78901234', 'Salvador', 'BA', 'Brasil'),
+('Comércio Versátil Ltda', 'Versátil Comércio', '12345098701235', '1996-02-28', 'Av. da Versatilidade, 678', '89012345', 'Florianópolis', 'SC', 'Brasil'),
+('Indústria Dinâmica EIRELI', 'Dinâmica Indústria', '65432178901236', '2003-09-10', 'Rua das Indústrias, 789', '90123456', 'Brasília', 'DF', 'Brasil'),
+('Logística Eficiente Ltda', 'Eficiente Logística', '12398765401237', '2012-11-05', 'Av. da Logística, 890', '34567890', 'Porto Alegre', 'RS', 'Brasil'),
+('Tecnologia Avançada EIRELI', 'Avançada Tecnologia', '87654321001238', '2004-06-25', 'Rua da Tecnologia, 123', '56789012', 'Uberlândia', 'MG', 'Brasil'),
+('Comércio Global Ltda', 'Global Comércio', '98765412301239', '2006-04-18', 'Av. do Comércio, 456', '78901234', 'Fortaleza', 'CE', 'Brasil'),
+('Indústria Inovadora EIRELI', 'Inovadora Indústria', '65432109801240', '1999-01-30', 'Rua da Inovação, 789', '90123456', 'Recife', 'PE', 'Brasil'),
+('Serviços Estratégicos S/A', 'Estratégicos Serviços', '10987654301241', '2007-10-12', 'Av. da Estratégia, 123', '12345678', 'Goiânia', 'GO', 'Brasil'),
+('Logística Rápida Ltda', 'Rápida Logística', '21098765401243', '2001-07-15', 'Av. da Logística, 789', '34567890', 'Americana', 'SP', 'Brasil'),
+('Consultoria Global S/A', 'Global Consultoria', '98701234501244', '2010-12-05', 'Rua da Consultoria, 876', '45678901', 'São José dos Campos', 'SP', 'Brasil'),
+('Fábrica Eficiente Ltda', 'Eficiente Fábrica', '54321098701245', '2009-02-22', 'Av. da Eficiência, 234', '56789012', 'Santo André', 'SP', 'Brasil'),
+('Indústria Ágil EIRELI', 'Ágil Indústria', '87654321001246', '1998-06-17', 'Rua da Agilidade, 567', '78901234', 'São Bernardo do Campo', 'SP', 'Brasil'),
+('Comércio Estratégico Ltda', 'Estratégico Comércio', '98765432101247', '2003-03-08', 'Av. da Estratégia, 890', '90123456', 'Diadema', 'SP', 'Brasil'),
+('Logística Moderna Ltda', 'Moderna Logística', '65432109801248', '2011-04-30', 'Rua da Logística, 123', '12345678', 'Mauá', 'SP', 'Brasil'),
+('Consultoria Dinâmica S/A', 'Dinâmica Consultoria', '10987654301249', '2005-09-19', 'Av. da Consultoria, 456', '23456789', 'São Caetano do Sul', 'SP', 'Brasil');
+
+INSERT INTO PRODUTO (nomeProduto, descricao, paraCriancas, precoUnitarioVenda, categoria, peso_kg, dimensoes, avaliacao)
+VALUES
+('Camiseta Casual', 'Camiseta de algodão para uso casual', 0, 29.99, 'Vestuario', 0.2, 'Normal', NULL),
+('Smartphone X10', 'Smartphone com tela OLED e câmera de alta resolução', 0, 799.99, 'Eletroeletronicos', 0.15, 'Pequeno', NULL),
+('Liquidificador Pro', 'Liquidificador com potência de 800W para preparar sucos e vitaminas', 0, 79.90, 'Eletrodomesticos', 1.5, 'Normal', NULL),
+('Livro: Aventuras Fantásticas', 'Livro de aventura para jovens leitores', 1, 19.99, 'Livros', 0.6, 'Normal', NULL),
+('Caneta Esferográfica Azul', 'Caneta de tinta azul para uso geral', 0, 2.49, 'Papelaria', 0.01, 'Micro', NULL),
+('Cadeira de Escritório', 'Cadeira ergonômica com encosto ajustável', 0, 149.99, 'Moveis', 10.0, 'Grande', NULL),
+('Fone de Ouvido S/ Fio', 'Fone de ouvido com tecnologia Bluetooth', 0, 59.90, 'Eletroeletronicos', 0.05, 'Pequeno', NULL),
+('Máquina de Café Expresso', 'Máquina de café com sistema de cápsulas', 0, 199.00, 'Eletrodomesticos', 3.0, 'Normal', NULL),
+('Vestido de Festa Decote', 'Vestido longo para festas e eventos especiais', 0, 129.99, 'Vestuario', 0.4, 'Normal', NULL),
+('Lápis de Cor ', 'Conjunto de lápis de cor para desenhos', 1, 9.99, 'Papelaria', 0.1, 'Pequeno', NULL),
+('Sofá Reclinável', 'Sofá confortável com função de reclinamento', 0, 499.99, 'Moveis', 25.0, 'Volumoso', NULL),
+('Tablet Kids', 'Tablet educativo para crianças com jogos e atividades', 1, 129.90, 'Eletroeletronicos', 0.3, 'Normal', NULL),
+('Panela de Pressão Elétrica', 'Panela de pressão elétrica com vários programas de cozimento', 0, 89.00, 'Eletrodomesticos', 2.5, 'Normal', NULL),
+('Calça Jeans Skinny', 'Calça jeans de corte clássico', 0, 49.99, 'Vestuario', 0.6, 'Normal', NULL),
+('Estante de Livros', 'Estante para organizar livros e objetos decorativos', 0, 89.99, 'Moveis', 12.0, 'Grande', NULL),
+('Camiseta Casual Masc.', 'Camiseta de algodão para uso casual', 0, 29.99, 'Vestuario', 0.2, 'Normal', NULL),
+('Smartphone X11', 'Smartphone com tela OLED e câmera de alta resolução', 0, 799.99, 'Eletroeletronicos', 0.15, 'Pequeno', NULL),
+('Liquidificador Pro 7v.', 'Liquidificador com potência de 800W para preparar sucos e vitaminas', 0, 79.90, 'Eletrodomesticos', 1.5, 'Normal', NULL),
+('Livro: Aventuras no Espaço', 'Livro de aventura para jovens leitores', 1, 19.99, 'Livros', 0.6, 'Normal', NULL),
+('Caneta Esferográfica', 'Caneta de tinta azul para uso geral', 0, 2.49, 'Papelaria', 0.01, 'Micro', NULL),
+('Cadeira de Escritório Luxo', 'Cadeira ergonômica com encosto ajustável', 0, 149.99, 'Moveis', 10.0, 'Grande', NULL),
+('Fone de Ouvido Sem Fio', 'Fone de ouvido com tecnologia Bluetooth', 0, 59.90, 'Eletroeletronicos', 0.05, 'Pequeno', NULL),
+('Máquina de Café Expresso', 'Máquina de café com sistema de cápsulas', 0, 199.00, 'Eletrodomesticos', 3.0, 'Normal', NULL),
+('Vestido de Festa', 'Vestido longo para festas e eventos especiais', 0, 129.99, 'Vestuario', 0.4, 'Normal', NULL),
+('Lápis de Cor', 'Conjunto de lápis de cor para desenhos', 1, 9.99, 'Papelaria', 0.1, 'Pequeno', NULL),
+('Sofá Reclinável', 'Sofá confortável com função de reclinamento', 0, 499.99, 'Moveis', 25.0, 'Volumoso', NULL),
+('Tablet Kids', 'Tablet educativo para crianças com jogos e atividades', 1, 129.90, 'Eletroeletronicos', 0.3, 'Normal', NULL),
+('Panela de Pressão Elétrica', 'Panela de pressão elétrica com vários programas de cozimento', 0, 89.00, 'Eletrodomesticos', 2.5, 'Normal', NULL),
+('Calça Jeans', 'Calça jeans de corte clássico', 0, 49.99, 'Vestuario', 0.6, 'Normal', NULL),
+('Estante de Livros', 'Estante para organizar livros e objetos decorativos', 0, 89.99, 'Moveis', 12.0, 'Grande', NULL);
+
+-- Em caso de erro 1452, chegar o intervalo real de idProduto e idFornecedor
+-- select * from PRODUTO;
+-- select * from FORNECEDOR;
+INSERT INTO PRODUTO_FORNECEDOR (idPRODUTO, idFornecedor, estoque, valorUnitarioCompra)
+VALUES 
+(1, 1, 200, 20.00),
+(2, 2, 30, 700.00),
+(3, 3, 50, 70.00),
+(4, 2, 500, 18.00),
+(5, 4, 5000, 2.00),
+(6, 5, 120, 120.00),
+(7, 1, 120, 58.00),
+(8, 2, 60, 180.00),
+(9, 5, 50, 120.00),
+(10, 6, 500, 10.00),
+(11, 7, 10, 420.00),
+(12, 6, 55, 120.00),
+(13, 8, 95, 80.00),
+(14, 9, 102, 45.00),
+(15, 1, 55, 80.10),
+(16, 1, 507, 20.00),
+(17, 2, 5, 720.00),
+(18, 12, 60, 50.00),
+(19, 13, 1050, 12.00),
+(20, 14, 996, 2.00),
+(21, 15, 50, 120.00),
+(22, 14, 60, 50.00),
+(23, 15, 20, 170.50),
+(24, 15, 51, 120.00),
+(25, 11, 610, 9.00),
+(26, 12, 10, 420.00),
+(27, 19, 40, 120.00),
+(28, 18, 52, 70.00),
+(29, 17, 100, 30.00),
+(30, 16, 80, 80.00);
+
+-- select * from PRODUTO_FORNECEDOR f join PRODUTO p using(idProduto)
+-- 	where f.valorUnitarioCompra > 100;
+    
+
+INSERT INTO PEDIDO (idCliente, statusPedido, dataCompra, ultimaAtualizacao, descricao)
+VALUES
+(1, 'Aprovado', '2023-01-15', '2023-01-16 12:34:56', 'Pedido aprovado'),
+(2, 'Em Processamento', '2023-02-05', '2023-02-06 08:45:30', 'Pedido em processamento'),
+(3, 'Enviado', '2023-03-20', '2023-03-27 15:20:10', 'Pedido enviado para entrega'),
+(5, 'Aprovado', '2023-04-08', '2023-04-09 14:25:40', 'Pedido aprovado e em processamento'),
+(1, 'Entregue', '2023-05-10', '2023-05-17 10:05:55', 'Pedido entregue com sucesso'),
+(6, 'Cancelado', '2023-06-25', '2023-06-26 16:30:25', 'Pedido cancelado'),
+(7, 'Aprovado', '2023-07-12', '2023-07-13 09:12:48', 'Pedido aprovado e em processamento'),
+(18, 'Em Processamento', '2023-01-03', '2023-01-04 11:23:57', 'Pedido em processamento'),
+(19, 'Aprovado', '2023-02-18', '2023-02-19 13:45:22', 'Pedido aprovado'),
+(11, 'Enviado', '2023-03-10', '2023-03-17 17:55:36', 'Pedido enviado para entrega'),
+(11, 'Aprovado', '2023-04-25', '2023-04-26 14:36:45', 'Pedido aprovado'),
+(12, 'Em Processamento', '2023-05-15', '2023-05-16 09:21:03', 'Pedido em processamento'),
+(23, 'Entregue', '2023-06-28', '2023-07-05 18:42:15', 'Pedido entregue com sucesso'),
+(14, 'Cancelado', '2023-07-05', '2023-07-06 07:59:10', 'Pedido cancelado'),
+(13, 'Enviado', '2023-01-22', '2023-01-29 12:15:30', 'Pedido enviado para entrega'),
+(16, 'Aprovado', '2023-02-12', '2023-02-13 16:28:50', 'Pedido aprovado e em processamento'),
+(27, 'Entregue', '2023-03-17', '2023-03-24 10:50:22', 'Pedido entregue com sucesso'),
+(18, 'Em Processamento', '2023-04-29', '2023-04-30 14:59:18', 'Pedido em processamento'),
+(19, 'Aprovado', '2023-06-05', '2023-06-06 09:37:40', 'Pedido aprovado'),
+(20, 'Enviado', '2023-07-18', '2023-07-25 17:18:05', 'Pedido enviado para entrega'),
+(31, 'Aprovado', '2023-01-15', '2023-01-17 08:30:20', 'Pedido aprovado'),
+(32, 'Em Processamento', '2023-02-05', '2023-02-07 15:40:12', 'Pedido em processamento'),
+(37, 'Enviado', '2023-03-20', '2023-03-28 09:10:35', 'Pedido enviado para entrega'),
+(24, 'Aprovado', '2023-04-08', '2023-04-10 12:55:28', 'Pedido aprovado e em processamento'),
+(15, 'Entregue', '2023-05-10', '2023-05-18 11:20:44', 'Pedido entregue com sucesso'),
+(26, 'Cancelado', '2023-06-25', '2023-06-27 14:15:50', 'Pedido cancelado'),
+(7, 'Aprovado', '2023-07-12', '2023-07-14 07:40:36', 'Pedido aprovado e em processamento'),
+(18, 'Em Processamento', '2023-01-03', '2023-01-05 10:25:18', 'Pedido em processamento'),
+(11, 'Aprovado', '2023-02-18', '2023-02-20 09:15:27', 'Pedido aprovado'),
+(10, 'Enviado', '2023-03-10', '2023-03-18 16:30:39', 'Pedido enviado para entrega'),
+(31, 'Aprovado', '2023-04-25', '2023-04-27 14:48:50', 'Pedido aprovado'),
+(22, 'Em Processamento', '2023-05-15', '2023-05-17 09:59:03', 'Pedido em processamento'),
+(33, 'Entregue', '2023-06-28', '2023-07-06 17:12:15', 'Pedido entregue com sucesso'),
+(14, 'Cancelado', '2023-07-05', '2023-07-07 07:25:30', 'Pedido cancelado'),
+(25, 'Enviado', '2023-01-22', '2023-01-30 13:15:40', 'Pedido enviado para entrega'),
+(6, 'Aprovado', '2023-02-12', '2023-02-14 18:22:55', 'Pedido aprovado e em processamento'),
+(7, 'Entregue', '2023-03-17', '2023-03-25 10:40:10', 'Pedido entregue com sucesso'),
+(8, 'Em Processamento', '2023-04-29', '2023-04-30 16:59:25', 'Pedido em processamento'),
+(29, 'Aprovado', '2023-06-05', '2023-06-07 08:37:30', 'Pedido aprovado'),
+(30, 'Enviado', '2023-07-18', '2023-07-26 16:08:55', 'Pedido enviado para entrega');
+
+-- select statusPedido, count(*) from PEDIDO group by statusPedido;
+
+
+insert into PAGAMENTO (idPedido, formaPagamento, statusPagamento, ultimaAtualizacao) 
+values
+(1, 'Boleto', 'Cancelado', '2023-01-20 16:20:00'),
+(2, 'Boleto', 'Aprovado', '2023-02-15 16:20:00'),
+(3, 'Boleto', 'Aprovado', '2023-04-03 16:20:00'),
+(4, 'PIX', 'Aprovado', '2023-04-08 16:20:00'),
+(5, 'Boleto', 'Aprovado', '2023-05-17 11:05:00'),
+(6, 'Cartão Crédito', 'Cancelado', '2023-06-25 14:45:00'),
+(7, 'Cartão Crédito', 'Aprovado', '2023-07-12 10:20:00'),
+(8, 'Boleto', 'Aprovado', '2023-01-11 12:23:00'),
+(9, 'Cartão Crédito', 'Aprovado', '2023-02-18 14:45:00'),
+(10, 'Cartão Crédito', 'Aprovado', '2023-03-10 14:45:00'),
+(11, 'Cartão Crédito', 'Aprovado', '2023-04-25 12:20:00'),
+(12, 'Boleto', 'Aprovado', '2023-05-23 10:21:00'),
+(13, 'Cartão Crédito', 'Aprovado', '2023-06-28 14:45:00'),
+(14, 'Cartão Crédito', 'Cancelado', '2023-07-06 14:45:00'),
+(15, 'Boleto', 'Aprovado', '2023-02-05 13:15:00'),
+(16, 'Cartão Crédito', 'Cancelado', '2023-02-20 14:45:00'),
+(17, 'Cartão Crédito', 'Aprovado', '2023-03-17 15:50:00'),
+(18, 'Boleto', 'Aprovado', '2023-05-07 16:58:00'),
+(19, 'Cartão Crédito', 'Aprovado', '2023-06-05 16:25:00'),
+(20, 'PIX', 'Aprovado', '2023-07-18 18:37:00'),
+(21, 'Cartão Crédito', 'Aprovado', '2023-01-15 18:30:00'),
+(22, 'Cartão Crédito', 'Aprovado', '2023-02-25 14:45:00'),
+(23, 'Boleto', 'Aprovado', '2023-04-04 10:10:00'),
+(24, 'Cartão Crédito', 'Aprovado', '2023-04-08 14:45:00'),
+(25, 'Cartão Crédito', 'Aprovado', '2023-05-10 14:45:00'),
+(26, 'Cartão Crédito', 'Cancelado', '2023-06-25 14:45:00'),
+(27, 'Cartão Crédito', 'Aprovado', '2023-07-12 08:00:00'),
+(28, 'Cartão Crédito', 'Aprovado', '2023-01-03 14:45:00'),
+(29, 'Boleto', 'Aprovado', '2023-02-27 10:15:00'),
+(30, 'PIX', 'Aprovado', '2023-03-10 17:59:00'),
+(31, 'Cartão Crédito', 'Aprovado', '2023-04-25 13:48:00'),
+(32, 'Cartão Crédito', 'Aprovado', '2023-05-15 14:45:00'),
+(33, 'Boleto', 'Aprovado', '2023-06-14 09:45:00'),
+(34, 'Cartão Crédito', 'Cancelado', '2023-07-05 14:45:00'),
+(35, 'Cartão Crédito', 'Aprovado', '2023-01-22 14:45:00'),
+(36, 'Cartão Crédito', 'Cancelado', '2023-02-18 14:45:00'),
+(37, 'Cartão Crédito', 'Aprovado', '2023-03-18 14:45:00'),
+(38, 'Cartão Crédito', 'Aprovado', '2023-04-29 14:45:00'),
+(39, 'Cartão Crédito', 'Aprovado', '2023-06-05 14:45:00'),
+(40, 'PIX', 'Aprovado', '2023-07-18 15:08:00');
+
+desc ITEM_PEDIDO;
+
+insert into ITEM_PEDIDO
+values
+(1, 2, 1),
+(2, 17, 1),
+(3, 4, 2),
+(4, 24, 3),
+(5, 14, 10),
+(5, 1, 2),
+(5, 6, 5),
+(6, 18, 1),
+(7, 26, 1),
+(8, 17, 1),
+(9, 23, 1),
+(10, 23, 1),
+(10, 11, 1),
+(11, 5, 15),
+(12, 20, 5),
+(13, 30, 3),
+(14, 19, 1),
+(15, 14, 10),
+(15, 1, 2),
+(16, 16, 2),
+(16, 18, 1),
+(17, 29, 1),
+(18, 14, 2),
+(19, 23, 1),
+(20, 17, 1),
+(20, 12, 1),
+(21, 2, 1),
+(22, 20, 5),
+(23, 17, 2),
+(24, 26, 1),
+(25, 14, 10),
+(25, 11, 1),
+(26, 16, 2),
+(26, 18, 1),
+(27, 9, 1),
+(28, 14, 2),
+(29, 3, 1),
+(30, 27, 2),
+(30, 12, 1),
+(31, 2, 1),
+(32, 20, 5),
+(33, 7, 2),
+(34, 26, 1),
+(35, 4, 3),
+(35, 21, 1),
+(36, 16, 2),
+(36, 18, 2),
+(37, 9, 1),
+(38, 4, 5),
+(39, 23, 1),
+(40, 27, 2),
+(40, 30, 1);
+
+-- select item.idPedido, item.idProduto, pd.nomeProduto, item.quantidade, pd.precoUnitarioVenda, round(item.quantidade * pd.precoUnitarioVenda,2) as Total
+-- 	from ITEM_PEDIDO as item join PRODUTO as pd using (idProduto) order by Total desc;
+
+
